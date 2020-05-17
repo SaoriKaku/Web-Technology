@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 4</title>
+    <style type="text/css">
+    	.cls {
+    		text-align: center;
+            font-family: Times;
+    	}
+        .btn {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<body class="cls" >
+	<h3>Enter URL for Containers Shipping Companies List JSON File</h3>
+
+    <form name="myform" method="POST" id="location">
+    	<input type="text" name="URL" id="userUrl" value="containerlist.json"/>
+    	<br />
+    	<input type="button" value="Submit Query" class="btn" onclick="viewJSON(this.form)" />
+    </form>
+
+
+	<script type="text/javascript">
+
+    function viewJSON(what) {
+        var userUrl = what.URL.value;
+        if(userUrl == "") { 
+            alert("Error: no file has been detected. Please submit again.");
+        }
+        else {
+        html_text = "";
+        var jsonObj = loadJSON(userUrl);
+        jsonObj.onload = generateHTML(jsonObj);
+            if (html_text != ""){
+            popWindow = window.open("", "Top Container Shipping Companies", "height=1000, width=1200");
+            popWindow.document.write(html_text);
+            popWindow.document.close(); 
+            }
+        }
+    }
+
+    function loadJSON (url) {
+		// code for IE7+, firefox, chrome, opera, safari
+    	if(window.XMLHttpRequest) {
+    		var xmlhttp = new XMLHttpRequest();
+    	}
+    	//code for IE5, IE6
+    	else {
+    		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    	}
+        try {
+     //synchronous
+        xmlhttp.open("GET", url, false);
+    	xmlhttp.send();
+        var jsonObj = JSON.parse(xmlhttp.responseText);
+        }
+        catch (e) {
+            alert("JSON file does not exist or invalid JSON file.");
+        }
+        return jsonObj;
+    }
+        // if(xmlhttp.readyStatus == 4 && xmlhttp.status == 404) {
+        //     alert("JSON file does not exist.");
+        // }
+		
+	function generateHTML (jsonObj) {
+        if(!jsonObj.Mainline.Table.Row) {
+            alert("Error: no container shipping companies.");
+            return;
+        }
+        else {
+            var headerObj = jsonObj.Mainline.Table.Header.Data;
+            var tableCol = headerObj.length;
+            html_text = "<html lang='en'><head><meta charset='UTF-8'><title>Top Container Shipping Companies</title><style>*{font-family:'Times';}</style></head><body><table border='1'>";
+            
+            // output the first row: headers
+            html_text = html_text + "<tr>";
+            for(var i = 0; i < tableCol; i++) {
+                var singleHeader = headerObj[i];
+                html_text = html_text + "<th>" + singleHeader + "</th>";
+            }
+            html_text = html_text + "</tr>";
+
+            var rowObj = jsonObj.Mainline.Table.Row;
+      		var tableRow = rowObj.length;
+
+            //output the table from the second line
+            for(var i = 0; i < tableRow; i++) {
+                html_text = html_text + "<tr>";
+                var tableValue;
+                for(var j = 0; j < tableCol; j++) {
+    				if(j == 0) {
+    					tableValue = rowObj[i].Company;
+    				}
+    				if(j == 1) {
+    					tableValue = rowObj[i].Ships;
+    				}
+    				if(j == 2) {
+                        var hubs = rowObj[i].Hubs.Hub;
+                        tableValue = "<ul>";
+                        for (var k = 0; k < hubs.length; k++) {
+                            if(k == 0) {
+                                tableValue = tableValue + "<li style='font-weight:700'>" + hubs[0] + "</li>";
+                            }
+                            else {
+                                tableValue = tableValue + "<li>" + hubs[k] + "</li>";
+                            }
+                        }
+    					tableValue = tableValue + "</ul>";
+    				}
+    				if(j == 3) {
+    					tableValue = rowObj[i].Market;
+    				}
+                    // <a href='' target='_blank'></a>
+    				if(j == 4) {
+    					tableValue = "<a href='" + rowObj[i].HomePage + "''>" + rowObj[i].HomePage + "</a>"; 
+    				}
+                    // <img src='' />
+    				if(j == 5) {
+    					tableValue = "<img src='" + rowObj[i].Logo + "'" + "width=300" + "height=150" + "/>";
+    				}
+    				html_text = html_text + "<td>" + tableValue + "</td>";
+    			 }
+                html_text = html_text + "</tr>";
+            } //end for
+    	} // end else
+    	html_text = html_text + "</table></body></html>";
+    }		
+	</script>
+
+</body>
+
+</html>
