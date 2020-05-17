@@ -1,0 +1,182 @@
+
+* {
+	  margin: 0;
+	  padding: 0;
+}
+
+/*word-break: keep-all;*/
+#resultsTable td {
+    white-space: nowrap;
+}
+
+#resultsTable tr {
+    white-space: nowrap;
+}
+
+#favoritesTable td {
+    white-space: nowrap;
+}
+
+#favoritesTable tr {
+    white-space: nowrap;
+}
+
+#eventTable td {
+    white-space: nowrap;
+}
+
+#eventTable tr {
+    white-space: nowrap;
+}
+
+ul {
+    white-space: nowrap;
+}
+
+#container {
+  	margin: 20px auto 0;
+  	max-width: 1000px;
+  	border: 1px solid #c1c1c1;
+  	border-radius: 10px;
+  	background-color: #f2f2f2;
+}
+
+#title {
+	  margin-top: 20px;
+    text-align: center;
+}
+
+#input_keyword.ng-invalid.ng-touched {
+	  border: 1px solid red;
+}
+
+#input_location.ng-invalid.ng-touched {
+  	border: 1px solid red;
+}
+
+/*when the event row is clicked*/
+.toActive {
+    background-color: #1a6bed;
+    color: white;
+}
+
+.img_row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5px;
+    margin-bottom: 10px;
+}
+
+.img_column {
+    flex: 33%;
+    max-width: 33%;
+    /*top/buttom left/right*/
+    padding: 0 5px;
+}
+
+.img_row .img_column img {
+    margin-top: 10px;
+    vertical-align: middle;
+}
+
+/* Responsive design: makes one column layout instead of three columns */
+@media screen and (max-width: 500px) {
+    .img_column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+.row_highlight  {
+  background-color: #f9db95;
+}
+
+#artistTeams h4:last-child {
+    margin-top: 10px;
+}
+
+.show-more-less {
+    line-height: 30px;
+}
+
+.show-more-less.ng-move,
+.show-more-less.ng-enter,
+.show-more-less.ng-leave {
+  transition:all linear 0.5s;
+}
+
+.show-more-less.ng-leave.ng-leave-active,
+.show-more-less.ng-move,
+.show-more-less.ng-enter {
+  opacity: 0;
+  max-height: 0px
+}
+
+.show-more-less.ng-leave,
+.show-more-less.ng-move.ng-move-active,
+.show-more-less.ng-enter.ng-enter-active {
+  opacity: 1;
+  max-height: 30px
+}
+
+/*animation: slide*/
+/*.slide: slideToLeft*/
+/*.slide.moveToRight: slideToRight*/
+.slide {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease-in-out;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    /*right: 0;*/
+    left: 0;
+}
+
+.slide.ng-enter {
+    animation-name: slideToLeft;
+    -webkit-animation-name: slideToLeft;
+}
+
+.slide.moveToRight.ng-enter {
+    animation-name: slideToRight;
+    -webkit-animation-name: slideToRight;
+}
+
+@keyframes slideToLeft {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@keyframes slideToRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes slideToLeft {
+    0% {
+      -webkit-transform: translateX(100%);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes slideToRight {
+    0% {
+      -webkit-transform: translateX(-100%);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+    }
+}
+
