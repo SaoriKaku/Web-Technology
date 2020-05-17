@@ -1,6 +1,6 @@
 # Web-Technology
 
-Course Homework/Project for CSCI572 Search Engine
+Course Homework/Project for CSCI571 Web-Technology
 
 ## Part 1: a simple sample to present Android Entertainment Event Search App
 
