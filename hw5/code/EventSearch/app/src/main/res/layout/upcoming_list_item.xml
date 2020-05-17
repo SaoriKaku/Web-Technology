@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/upcomingFragment_cardView_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardElevation="5dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/upcomingFragment_textView_displayName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlue"
+            android:text="displayName" />
+
+        <TextView
+            android:id="@+id/upcomingFragment_textView_artist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorOrange"
+            android:text="artist" />
+
+        <TextView
+            android:id="@+id/upcomingFragment_textView_dateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorGrey"
+            android:text="2018-01-01 00:00:00" />
+
+        <TextView
+            android:id="@+id/upcomingFragment_textView_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="type" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+

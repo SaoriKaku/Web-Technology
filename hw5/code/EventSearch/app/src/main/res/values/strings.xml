@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">EventSearch</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="category">
+        <item>All</item>
+        <item>Music</item>
+        <item>Sports</item>
+        <item>Art&amp;Theatre</item>
+        <item>Film</item>
+        <item>Miscellaneous</item>
+    </string-array>
+
+    <string-array name="unit">
+        <item>Miles</item>
+        <item>Kilometers</item>
+    </string-array>
+
+    <string-array name="sort">
+        <item>Default</item>
+        <item>Event Name</item>
+        <item>Time</item>
+        <item>Artist</item>
+        <item>Type</item>
+    </string-array>
+
+    <string-array name="order">
+        <item>Ascending</item>
+        <item>Descending</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/detailsActivity_favorite"
+        android:title="favorite"
+        android:icon="@drawable/heart_fill_white"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/detailsActivity_twitter"
+        android:title="twitter"
+        android:icon="@drawable/twitter_ic"
+        app:showAsAction="always" />
+
+</menu>
