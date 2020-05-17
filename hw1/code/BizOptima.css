@@ -1,0 +1,379 @@
+
+/*clear margin and padding in browser*/
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box; 
+}
+
+/*determine the width of page*/
+.page {
+	width: 1154px;
+	margin: 0 auto;
+	font-family: Arial;
+}
+
+/*header begin*/
+header {
+	height: 106px;
+	background-color: #fff;
+}
+
+header p {
+	font-size: 14px;
+	color: #000;
+	float: left;
+	margin-left: 88px;
+	margin-top: 46px;
+}
+
+header ul {
+	float: right;
+	margin-top: 46px;
+	margin-right: 96px;
+}
+
+header li{
+	float: left;
+	list-style:none;
+}
+
+header a{
+	text-decoration:none;
+	font-size: 12px;
+	font-weight: 700;
+	color: #cacaca;
+}
+
+header a:hover {
+	color: #000;
+}
+
+header .middle{
+	padding: 0 26px;
+}
+/*header end*/
+
+
+/*lawer begin*/
+.lawyer {
+	height: 672px;
+	background: url(./images/lawyer.jpg) no-repeat -40px 0;
+	background-size: cover;
+	position: relative;
+}
+
+.signup {
+	height: 404px;
+	width: 355px;
+	background-color: #003D60;
+	position: absolute;
+	top: 134px;
+	left: 74px;
+	padding-left: 40px;
+	padding-top: 50px;
+}
+
+.signup p {
+	font-size: 12px;
+	color: #fff;
+}
+
+.signup h3 {
+	line-height: 35px;
+	font-weight: 400;
+	font-size: 34px;
+	color: #fff;
+	margin-top: 5px;
+}
+
+.signup em {
+	display: block;
+	font-size: 12px;
+	color: #ffdd00;
+	margin-top: 14px;
+}
+
+.signup input {
+	height: 45px;
+	line-height: 46px;
+	width: 275px;
+	background-color: #e3eaed;
+	border: 0;
+	margin-top: 23px;
+	font-size: 14px;
+	padding-left: 15px;
+	outline: none;
+}
+
+.signup button {
+	height: 42px;
+	width: 148px;
+	background-color: #ffdd00;
+	border: 0;
+	margin-top: 25px;
+	font-size: 10px;
+	color: #000;
+	cursor: pointer;
+}
+
+.signup button:hover {
+	background-color: #1b2531;
+	color: #fff;
+}
+
+/*lawer end*/
+
+/*feature begin*/
+.feature {
+	height: 390px;
+	background-color: #fff;
+	padding: 132px 76px 112px;
+}
+
+.feature li{
+	float: left;
+	list-style:none;
+}
+
+.feature h3 {
+	font-weight: 400;
+	font-size: 14px;
+	color: #000;
+}
+
+.feature p {
+	font-size: 12px;
+	color: #858585;
+	line-height: 20px;
+	margin-top: 16px;
+}
+
+.feature .middle {
+	padding: 0 60px;
+}
+/*feature end*/
+
+/*banner1 begin*/
+.banner1 {
+	height: 346px;
+	background-color: #f4f4f4;
+	padding-top: 140px;
+}
+
+.banner1 p {
+	font-size: 18px;
+	color: #1e1e1e;
+	text-align: center;
+}
+
+.banner1 h5 {
+	font-size: 12px;
+	font-weight: 400;
+	color: #808080;
+	margin-top: 16px;
+	text-align: center;
+}
+
+.banner1 h5 b {
+	color:  #1e1e1e;
+	font-weight: 700;
+}
+/*banner1 end*/
+
+/*price begin*/
+.price {
+	height: 772px;
+	padding-top: 56px;
+	position: relative;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.price span {
+	display: block;
+	height: 772px;
+	width: 1154px;
+	background: url(./images/glasses.png) no-repeat fixed;
+	background-size: cover;
+	filter: grayscale(1);
+	position: absolute;
+	z-index: -2;
+	top: 0;
+	left: 0;
+}
+
+.price h5 {
+	font-size: 18px;
+	font-weight: 400;
+	color: #000;
+	text-align: center;
+}
+
+.price p {
+	font-size: 12px;
+	color: #999;
+	margin-top: 12px;
+	text-align: center;
+}
+
+.price ul {
+	padding-top: 90px;
+	padding-left: 75px;
+}
+
+.price li{
+	float: left;
+	list-style:none;
+	height: 500px;
+	width: 308px;
+	text-align: center;
+	position: relative;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.price li span {
+	display: block;
+	height: 500px;
+	width: 308px;
+	background: url(./images/grid.png) no-repeat -2px 0;
+	background-color: #f8f8f8;
+	background-size: cover;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+}
+
+.price .middle {
+	margin: 0 40px;
+}
+
+.price dt {
+	font-size: 14px;
+	color: #000;
+	margin: 64px auto 30px;
+}
+
+.price dd {
+	font-size: 12px;
+	color: #4c4c4c;
+	margin-bottom: 22px;
+}
+
+.price h1 {
+	font-size: 26px;
+	font-weight: 400;
+	color: #1e1e1e;
+	margin: 50px auto 22px;
+}
+
+.price button {
+	height: 52px;
+	width: 130px;
+	background-color: #003d60;
+	border: 0;
+	font-size: 14px;
+	color: #fff;
+}
+
+.price button:hover {
+	background-color: #1b2531;
+}
+/*price end*/
+
+/*banner2 begin*/
+.banner2 {
+	height: 450px;
+	/*background-color: #1b2531;*/
+	background: rgba(0, 61, 96, 0.75);
+	padding-top: 162px;
+	text-align: center;
+	position: relative;
+}
+
+.banner2 span {
+	display: block;
+	height: 450px;
+	width: 1154px;
+	background: url(./images/notebook.jpg) no-repeat center center;
+	filter: grayscale(1);
+	background-size: cover;
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+}
+
+.banner2 h3 {
+	font-weight: 400;
+	font-size: 24px;
+	color: #fff;
+}
+
+.banner2 p {
+	font-size: 12px;
+	color: #fff;
+	margin: 10px auto 34px;
+}
+
+.banner2 button{
+	height: 42px;
+	width: 166px;
+	border: 0;
+	background-color: #ffdd00;
+	color: #000;
+	font-size: 12px;
+}
+
+.banner2 button:hover {
+	background-color: #1b2531;
+	color: #fff;
+}
+/*banner2 end*/
+
+
+/*footer begin*/
+footer {
+	height: 276px;
+	background-color: #1b2531;
+	text-align: center;
+	padding-top: 88px;
+}
+
+footer h3 {
+	font-weight: 400;
+	font-size: 14px;
+	color: #fff;
+}
+
+footer p {
+	font-size: 11px;
+	color: #b1b1b1;
+	margin: 10px auto 32px;
+}
+
+footer ul {
+	float: left;
+	margin-left: 410px;
+}
+
+footer li{
+	list-style:none;
+	float: left;
+	padding: 0 18px;
+}
+
+footer a {
+	display: block;
+}
+
+footer a img {
+	height: 30px;
+	width: 30px;
+}
+/*footer end*/
+
+
+
+
+
