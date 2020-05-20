@@ -2,7 +2,7 @@
 
 Course Homework/Project for CSCI571 Web-Technology
 
-## Part 1: a simple sample to present Android Entertainment Event Search App
+## Part 1: a simple presentation for Android Entertainment Event Search App
 
 main page(tab:SEARCH,FAVORITE) <-> Search Results page <-> event page(tab:EVENT,ARTIST(S),VENUE,UPCOMING)  
 
